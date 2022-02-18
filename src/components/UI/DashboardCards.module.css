@@ -1,0 +1,28 @@
+.container{
+    max-width: 20em;
+    width: 100%;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 3em 0;
+}
+.container h2{
+    color: #000;
+    margin-bottom: 0.2em;
+}
+
+.container p{
+    font-weight: 400;
+    font-size: 0.9em;
+    color: gray;
+    margin: 0;
+}
+.container svg{
+    padding: 0.5em;
+    border-radius: 8px;
+    background-color: #699CFD;
+    width: 2em;
+    height: 2em;
+    color: #fff;
+
+}

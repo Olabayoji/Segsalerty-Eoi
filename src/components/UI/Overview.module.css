@@ -1,0 +1,13 @@
+
+.container {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  h2{
+      color: #699CFD;
+  }
+
+  .head{
+      font-weight: 600;
+  }

@@ -1,0 +1,38 @@
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: auto;
+    list-style: none;
+    background-color: #fff;
+    width: 100%;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    top: 65px;
+    left: 0;
+    padding-bottom: 1em;
+}
+
+.container li{
+    width: 100%;
+    padding: 0 1.1em;
+    color: #222;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.container a{
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    width: 100%;
+    text-align: center;
+}

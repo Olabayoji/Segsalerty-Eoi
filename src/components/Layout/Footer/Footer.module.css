@@ -1,0 +1,30 @@
+.footer{
+    background-color: #0B0D17;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 5em;
+    margin-top: 8em;
+}
+
+
+@media(max-width: 992px){
+    .footer{
+        flex-direction: column;
+        margin-top: 4em;
+    }
+    .logo{
+        order: 1;
+        margin-bottom: 1em;
+    }
+    .social{
+        order: 2;
+    }
+    .copyright{
+        order: 3;
+        min-width: 236px;
+    }
+}

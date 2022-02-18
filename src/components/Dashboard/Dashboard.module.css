@@ -1,0 +1,9 @@
+.dashboard{
+    height: calc(100vh - 5em);
+    background-color: rgb(248, 246, 246);
+    display: flex;
+    max-height: 100vh;
+}
+.dashboard >*{
+    width: auto;
+}

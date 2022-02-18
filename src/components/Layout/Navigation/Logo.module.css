@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    align-items: center;
+    /* margin-left: -4em; */
+    justify-content: center;
+    position: relative;
+    top: 0.6em;
+}
+.right{
+    right: 10.5%;
+
+}
+.container img{
+    transform: scale(1.8);
+    margin-right: 0.1em;
+    position: relative;
+    top: 0.2em;
+
+}
+
+.text{
+    font-size: 20px;
+    color: #699CFD;
+    padding-bottom: 1em; 
+    font-weight: 800;
+    font-size: 1.3em;
+    font-family: "Inter";
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 992px){
+    .container{
+        margin-left: 0;
+    }
+}

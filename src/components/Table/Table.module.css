@@ -1,0 +1,123 @@
+.container{
+    overflow-x: scroll;
+    width: 100%;
+
+}
+
+ .container h2{
+    text-align: center;
+
+}
+.wrapper{
+    width: 100%;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+    border-spacing: 0 10px;
+    margin: 25px 0;
+    font-size: 0.9em;
+}
+
+
+thead tr{
+    width: 100%;
+    font-weight: 600;
+    text-align: left;
+    /* background-color: #B5CDFE; */
+}
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.tbody{
+    
+    max-height: 40em ;
+    overflow: scroll;
+    width: 100%;
+}
+
+th, td{
+    padding: 1.1em;
+}
+tbody tr{
+    border-bottom: 1px solid #dddddd57;
+    margin: 0.5em;
+
+
+}
+tbody tr:hover{
+    background-color: #699dfd23;
+    border-radius: 8px;
+    cursor: pointer;
+}
+td:first-child {
+    border-left-style: transparent;
+    border-top-left-radius: 8px; 
+    border-bottom-left-radius: 8px;
+}
+
+td:last-child {
+    border-right-style: transparent;
+    border-bottom-right-radius: 8px; 
+    border-top-right-radius: 8px; 
+}
+/*  */
+table tr:nth-child(even) {
+    background-color: rgb(247, 247, 247) ;
+    color: inherit ;
+  }
+
+  table tr:nth-child(even):hover {
+    background-color: #699dfd23;
+  }
+
+
+   .pagination{
+       text-align: center;
+       margin: 1em 0;
+
+   }
+   .pagination > span{
+       margin: 0 0.3em;
+   }
+   .pagination button, .pagination select{
+       padding: 0.5em 1em;
+       border: none;
+       border-radius: 8px;
+       background-color: #699CFD;
+       color: #fff;
+       font-weight: 700;
+       outline: none;
+       transition: 0.3s;
+   }
+
+   .pagination  button:hover,  .pagination > select:hover {
+       background-color: #B5CDFE;
+       cursor: pointer;
+       
+   }
+
+   .header{
+       margin-top: 0;
+   }
+
+   @media(max-width:650px){
+       .pagination{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+       }
+       .pagination > span{
+           margin-bottom: 0.5em;
+       }
+    }

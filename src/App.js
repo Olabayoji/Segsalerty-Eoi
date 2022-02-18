@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MainNavigation from "./components/Layout/Navigation/MainNavigation";
+import { Outlet } from "react-router-dom";
+import Footer from "./components/Layout/Footer/Footer";
+import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-function App() {
+const App = () => {
+  const token = useSelector((state) => state.auth);
+  const { pathname } = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MainNavigation />
+      <main>
+        <Outlet />
+      </main>
+      {pathname === "/" && <Footer />}
+    </>
   );
-}
+};
 
 export default App;

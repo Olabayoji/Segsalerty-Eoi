@@ -1,0 +1,67 @@
+.container, .join{
+    display: flex;
+    margin-left: 10px;
+    position: relative;
+    top: 0.6em;
+}
+.container{
+    height: 100%;
+  display: flex;
+  align-items: center;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    list-style: none;
+}
+
+li{
+    height: 100%;
+  padding: 0 1.1em;
+  color: #222;
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-top: 2px solid transparent;
+  transition: all 220ms ease-in-out;
+
+}
+
+.container a{
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+
+.container svg{
+    width: 2.5em;
+    height: 2.5em;
+    background-color: rgba(255, 255, 255, 0.103);
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.5em;
+    transition: 0.3s;
+}
+.container svg:hover{
+    color: #699CFD;
+} 
+
+.join svg{
+    color: #699CFD;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: rgba(231, 230, 230, 0.192);
+    border-radius: 50%;
+    padding: 0.5em;
+    transition: 0.3s;
+}
+
+.join svg:hover{
+    color: #B5CDFE;
+
+}

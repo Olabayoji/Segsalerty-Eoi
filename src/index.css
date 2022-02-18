@@ -1,13 +1,155 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Work Sans";
+  overflow-x: hidden;
+  max-height: 100vh;
+}
+*{
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.btn{
+  background-color: #5E8BE0;
+  padding: 1em 5em ;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 8px;
+  margin-top: 5em;
+}
+.btn:hover{
+  background-color: #5e8be0a4;
+}
+
+main{
+  min-height: -webkit-fill-available;
+}
+
+.asterick{
+  color: red;
+  font-weight: normal;
+  margin-left: 0.2em;
+}
+.btn-container{
+  display: flex;
+  justify-content:flex-end;
+  justify-self: center;
+  width: 100%;
+  margin: 1em 0;
+
+}
+.btn-container > * {
+  width: 50%;
+  padding: 1em 0;
+  border-radius: 8px;
+  border: none;
+  font-weight: 800;
+  
+}
+
+.btn-container >*:hover{
+  cursor: pointer;
+}
+
+.btn-container .next{
+  background-color: #699CFD;
+  color: #fff;
+  margin-left: 2%;
+  transition: 0.3s;
+
+}
+
+.close{
+  background-color: #699CFD;
+  color: #fff;
+  transition: 0.3s;
+  width: 100%;
+  padding: 1em 0;
+  border-radius: 8px;
+  border: none;
+  font-weight: 800;
+
+}
+
+.logout{
+  background-color: #699CFD;;
+  color: #fff;
+  transition: 0.3s;
+  /* width: 100%; */
+  padding: 1em 1em;
+  border-radius: 8px;
+  border: none;
+  font-weight: 800;
+  /* margin-right: 2em; */
+}
+
+.close:hover, .logout:hover{
+  background-color: #699dfd80;
+cursor: pointer;
+}
+
+.next:hover{
+  background-color: #699dfd80;
+}
+
+.btn-container .back{
+background-color: #fff;
+color: #699CFD;
+margin-right: 1%;
+border: 1px solid #699CFD;
+transition: 0.3s;
+
+}
+.back:hover{
+  border: 1px solid #699dfd80;
+  color: #699dfd80;
+}
+.centered {
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0
+}
+
+.desc{
+  display: flex;
+  align-items: center;
+  margin: 1em ;
+}
+.desc > div{
+  width: 1em;
+  height: 1.5em;
+  background-color: black;
+  border-radius: 8px;
+  margin-right: 0.5em;
+}
+.desc  span{
+  font-size: 1.5em;
+  font-weight: 500;
+
+}
+
+@media (max-width: 992px) {
+  main{
+    /* padding: 0.5em 2em; */
+  }
+  
 }
