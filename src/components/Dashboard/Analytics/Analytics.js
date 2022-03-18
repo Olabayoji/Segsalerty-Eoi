@@ -27,13 +27,16 @@ const Analytics = () => {
   let chartData = 0;
 
   if (data) {
+    console.log(data);
     ui_ux = data.filter((el) => el.TechSkill === "UI/UX Design");
-    data_science = data.filter((el) => el.TechSkill === " Data Science");
+    data_science = data.filter((el) => el.TechSkill === "Data Science");
     dev_ops = data.filter((el) => el.TechSkill === "Dev Ops");
     mobile_app = data.filter((el) => el.TechSkill === "Mobile App Development");
-    frontend = data.filter((el) => el.TechSkill === " Frontend Development");
+    frontend = data.filter((el) => el.TechSkill === "Frontend Development");
     backend = data.filter((el) => el.TechSkill === "Backend Development");
-    qa = data.filter((el) => el.TechSkill === " QA Testing");
+    qa = data.filter(
+      (el) => el.TechSkill === "QA Testing" || el.TechSkill === " QA Testing"
+    );
     pm = data.filter((el) => el.TechSkill === "Technical Project Management");
     other = data.filter((el) => el.TechSkill === "Other");
     chartData = [

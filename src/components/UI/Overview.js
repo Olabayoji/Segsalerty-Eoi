@@ -74,7 +74,7 @@ const Overview = (props) => {
       {props.data.git === "Yes" && (
         <div className={classes.container}>
           <p className={classes.head}>GitHub URL</p>
-          <p>{props.data.gitURL}</p>
+          <p>{props.data.gitUrl}</p>
         </div>
       )}
       <div className={classes.container}>

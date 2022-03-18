@@ -76,7 +76,7 @@ const StepOne = (props) => {
             </div>
             <div
               className={
-                errors.name && touched.tel
+                errors.tel && touched.tel
                   ? `${classes["input-container"]} ${classes.invalid} `
                   : classes["input-container"]
               }
