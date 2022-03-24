@@ -36,12 +36,12 @@ export function Social(props) {
     <div className={iconClass}>
       <ul>
         <li>
-          <a href="#" target="_blank">
+          <a href="/" target="_blank">
             <FiInstagram />
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a href="/" target="_blank">
             {" "}
             <BiBasketball />
           </a>
@@ -54,7 +54,7 @@ export function Social(props) {
         </li>
 
         <li>
-          <a href="#" target="_blank">
+          <a href="/" target="_blank">
             {" "}
             <AiOutlineYoutube />
           </a>
