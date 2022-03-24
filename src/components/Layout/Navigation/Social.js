@@ -47,7 +47,11 @@ export function Social(props) {
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/SegsalertyTech" target="_blank">
+          <a
+            href="https://twitter.com/SegsalertyTech"
+            target="_blank"
+            rel="noreferrer"
+          >
             {" "}
             <FiTwitter />
           </a>
