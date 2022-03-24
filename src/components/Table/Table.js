@@ -91,7 +91,7 @@ const Table = () => {
         setData(data.data);
         setLoading(false);
       });
-  }, [setData]);
+  }, [setData, dispatch, token]);
 
   //   Table data
   const tableData = React.useMemo(() => data, [data]);
