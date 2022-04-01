@@ -9,7 +9,8 @@ form{
 
 .wrapper{
     display: flex;
-    max-height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }
 
 .wrapper >* {
@@ -18,7 +19,6 @@ form{
 .wrapper img {
     object-fit: cover;
     object-position: bottom;
-    height: calc(100vh - 5em);
 }
 .container h2{
     font-family: "Inter";

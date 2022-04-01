@@ -28,19 +28,20 @@ ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<HomePage />} />
-            <Route path="join" element={<JoinPage />} />
+          <Route path="join" element={<App />}>
+            <Route index element={<JoinPage />} />
+          </Route>
+          <Route
+            path="login"
+            element={
+              <RequireNoAuth redirectTo="/admin">
+                <Auth />
+              </RequireNoAuth>
+            }
+          />
+          <Route path="admin" element={<App />}>
             <Route
-              path="login"
-              element={
-                <RequireNoAuth redirectTo="/">
-                  <Auth />
-                </RequireNoAuth>
-              }
-            />
-            <Route
-              path="admin"
+              index
               element={
                 <RequireAuth redirectTo="/login">
                   <Dashboard />
@@ -48,6 +49,7 @@ ReactDOM.render(
               }
             />
           </Route>
+          <Route path="/" element={<Navigate to="/join" replace />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>

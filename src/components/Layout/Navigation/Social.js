@@ -16,7 +16,7 @@ export function Social(props) {
   const { pathname } = useLocation();
   const logoutHandler = () => {
     dispatch(authActions.logOut());
-    navigate("/");
+    navigate("/login");
   };
 
   const iconClass =

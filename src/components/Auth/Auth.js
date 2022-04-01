@@ -60,7 +60,7 @@ const Auth = () => {
             token: data.data.accessToken,
           })
         );
-        navigate("/admin");
+        navigate("admin");
       })
       .catch((err) => {
         setError(err.message);

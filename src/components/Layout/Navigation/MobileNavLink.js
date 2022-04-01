@@ -18,16 +18,16 @@ const MobileNavLink = () => {
       {isOpen && (
         <React.Fragment>
           <ul onClick={onToggle}>
-            <li>
+            {/* <li>
               <Link to="/">Home</Link>
-            </li>
+            </li> */}
             {token && (
               <li>
-                <Link to="admin">Dashboard</Link>
+                <Link to="/admin">Dashboard</Link>
               </li>
             )}
             <li>
-              <Link to="join">Join Us</Link>
+              <Link to="/join">Join Us</Link>
             </li>
             {pathname === "/admin" && <Social />}
           </ul>

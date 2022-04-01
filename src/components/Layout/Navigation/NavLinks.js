@@ -10,7 +10,7 @@ const NavLinks = () => {
   return (
     <div className={classes.container}>
       <ul>
-        <li>
+        {/* <li>
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -19,11 +19,22 @@ const NavLinks = () => {
           >
             Home
           </NavLink>
+        </li> */}
+
+        <li>
+          <NavLink
+            to="/join"
+            className={({ isActive }) =>
+              isActive ? activeClassName : undefined
+            }
+          >
+            Join Us
+          </NavLink>
         </li>
         <li>
           {token && (
             <NavLink
-              to="admin"
+              to="/admin"
               className={({ isActive }) =>
                 isActive ? activeClassName : undefined
               }
@@ -31,16 +42,6 @@ const NavLinks = () => {
               Dashboard
             </NavLink>
           )}
-        </li>
-        <li>
-          <NavLink
-            to="join"
-            className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            }
-          >
-            Join Us
-          </NavLink>
         </li>
       </ul>
     </div>

@@ -12,11 +12,11 @@ const Logo = () => {
       : `${classes.container}`;
 
   return (
-    <div className={classN}>
-      <Link to="/" className={classes.text}>
+    <div className={classes.container}>
+      <a href="https://segsalerty.com/" className={classes.text}>
         <img src={BrandLogo} alt=" " />
         <span>Segsalerty</span>
-      </Link>
+      </a>
     </div>
   );
 };
