@@ -4,18 +4,15 @@ import classes from "./Overview.module.css";
 import LoadingSpinner from "../UI/LoadingSpinner";
 const Overview = (props) => {
   let loading;
-  if (props.isLoading === true) {
-    loading = (
-      <div className="centered">
-        <LoadingSpinner />
-      </div>
-    );
-  }
+
   const overview = (
     <Card>
       <h2>{props.data.FullName}</h2>
       <div className={classes.container}>
-        <p className={classes.head}>Email address</p> <p>{props.data.Email}</p>
+        <p className={classes.head}>Email address</p>{" "}
+        <a className={classes.link} href={`mailto:${props.data.Email}`}>
+          {props.data.Email}
+        </a>
       </div>
       <div className={classes.container}>
         <p className={classes.head}>Phone number</p>
@@ -63,7 +60,9 @@ const Overview = (props) => {
       </div>
       <div className={classes.container}>
         <p className={classes.head}>GitHub URL</p>
-        <p>{props.data.GithubLink}</p>
+        <a className={classes.link} href={props.data.GithubLink}>
+          {props.data.GithubLink}
+        </a>
       </div>
       <div className={classes.container}>
         <p className={classes.head}>Why do you want to join my network?</p>

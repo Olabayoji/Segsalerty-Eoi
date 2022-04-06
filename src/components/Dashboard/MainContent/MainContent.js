@@ -5,6 +5,9 @@ import Analytics from "../Analytics/Analytics";
 import DashboardCards from "../../UI/DashboardCards";
 import { FaUser } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import HireTable from "../../Table/HireTable";
+import ProductTable from "../../Table/ProductTable";
+import MentorTable from "../../Table/MentorTable";
 
 const MainContent = () => {
   const data = useSelector((state) => state.auth.data);
@@ -20,7 +23,10 @@ const MainContent = () => {
         {/* <DashboardCards /> */}
       </div>
       <Table />
-      <Analytics />
+      <HireTable />
+      <ProductTable />
+      <MentorTable />
+      {/* <Analytics /> */}
     </div>
   );
 };

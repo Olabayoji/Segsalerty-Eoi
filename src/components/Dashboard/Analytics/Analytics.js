@@ -27,7 +27,6 @@ const Analytics = () => {
   let chartData = 0;
 
   if (data) {
-    console.log(data);
     ui_ux = data.filter((el) => el.TechSkill === "UI/UX Design");
     data_science = data.filter((el) => el.TechSkill === "Data Science");
     dev_ops = data.filter((el) => el.TechSkill === "Dev Ops");

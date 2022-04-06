@@ -3,10 +3,10 @@ import { useTable, useSortBy, useFilters, usePagination } from "react-table";
 import React, { useState, useEffect } from "react";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
-import UserSummary from "../UI/UserSummary";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../../store/auth-slice";
 import Tooltip from "@mui/material/Tooltip/Tooltip";
+import HireSummary from "../UI/HireSummary";
 // import Tooltip from "@mui/material/Tooltip";
 const Table = () => {
   const dispatch = useDispatch();
@@ -22,11 +22,11 @@ const Table = () => {
   };
   const [data, setData] = useState([
     {
-      FullName: "",
-      Email: "",
-      TechSkill: "",
+      CompanyName: "",
+      ContactEmail: "",
+      WorkNature: "",
       Phone: "",
-      StateOfResidence: "",
+      FullName: "",
     },
   ]);
   const [loading, setLoading] = useState(true);
@@ -45,28 +45,28 @@ const Table = () => {
       //     Header: "User Info",
       //     columns: [
       {
-        Header: "Full Name",
-        accessor: "FullName",
+        Header: "Company",
+        accessor: "CompanyName",
         sortType: "alphanumeric",
       },
       {
         Header: "Email",
-        accessor: "Email",
+        accessor: "ContactEmail",
         sortType: "alphanumeric",
       },
       {
-        Header: "Tech skill",
-        accessor: "TechSkill",
+        Header: "Stack",
+        accessor: "StackForHire",
         sortType: "alphanumeric",
       },
       {
-        Header: "Phone",
-        accessor: "Phone",
+        Header: "Framework",
+        accessor: "Frameworks",
         sortType: "alphanumeric",
       },
       {
-        Header: "Residence",
-        accessor: "StateOfResidence",
+        Header: "Work Nature",
+        accessor: "WorkNature",
         sortType: "alphanumeric",
       },
       //     ],
@@ -76,7 +76,7 @@ const Table = () => {
   );
 
   useEffect(() => {
-    fetch("https://segsalerty-eoi.herokuapp.com/admin", {
+    fetch("https://segsalerty-eoi.herokuapp.com/admin?type=client", {
       method: "GET",
       withCredentials: true,
       headers: {
@@ -99,11 +99,12 @@ const Table = () => {
         }
       })
       .then((data) => {
-        dispatch(authActions.loadData(data.data));
         setData(data.data);
+        // console.log(data.data);
         setLoading(false);
       })
       .catch((err) => {
+        console.log("error");
         console.log(err);
         return err.message;
       });
@@ -145,11 +146,11 @@ const Table = () => {
   }
   return (
     <div className={classes.wrapper}>
-      {show && <UserSummary onClose={onClose} data={userInfo} />}
+      {show && <HireSummary onClose={onClose} data={userInfo} />}
       <div className={classes.container}>
         <div className="desc">
           <div></div>
-          <span>Mentees</span>
+          <span>Hire Talent</span>
         </div>
         <div className={classes.tbody}>
           <table {...getTableProps()}>

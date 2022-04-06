@@ -24,7 +24,7 @@
     border-radius: 8px;
 }
 .form-container{
-    margin-top: 5.5em;
+    margin-top: 2.5em;
 
 }
 
@@ -156,6 +156,10 @@ input[type='submit']:disabled, button:disabled{
     background-color: #699dfd80;
 
 }
+
+.schedule > p{
+    text-align: left !important;
+}
 @media (max-width: 992px){
     .form h1{
         font-size: 1.8em;
@@ -163,7 +167,7 @@ input[type='submit']:disabled, button:disabled{
 
     }
     .form-container{
-        margin-top: 2.5em;
+        margin-top: 1.5em;
     
     }
 }

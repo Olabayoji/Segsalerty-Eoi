@@ -158,7 +158,7 @@ const Forms = () => {
       {steps[currentStep]}
       <div className={classes.form}>
         <ProgressBar
-          progress={((currentStep + 1) / (6 + 1)) * 100}
+          progress={((currentStep + 1) / (5 + 1)) * 100}
           level={currentStep + 1}
         />
       </div>

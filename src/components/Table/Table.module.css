@@ -13,6 +13,8 @@
     background-color: #fff;
     padding: 1em;
     border-radius: 8px;
+    margin: 4rem 0;
+
 }
 
 
@@ -53,6 +55,11 @@ tbody tr{
     margin: 0.5em;
 
 
+}
+tbody td {
+    max-width: 4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 tbody tr:hover{
     background-color: #699dfd23;

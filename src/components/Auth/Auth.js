@@ -55,6 +55,7 @@ const Auth = () => {
         }
       })
       .then((data) => {
+        setLoading(false);
         dispatch(
           authActions.logIn({
             token: data.data.accessToken,
@@ -63,6 +64,7 @@ const Auth = () => {
         navigate("admin");
       })
       .catch((err) => {
+        setLoading(false);
         setError(err.message);
       });
   };

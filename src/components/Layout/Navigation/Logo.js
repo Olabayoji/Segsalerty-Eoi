@@ -7,15 +7,14 @@ const Logo = () => {
   const { pathname } = useLocation();
 
   let classN =
-    pathname === "/admin"
+    pathname !== "/admin"
       ? `${classes.right} ${classes.container}`
       : `${classes.container}`;
 
   return (
-    <div className={classes.container}>
-      <a href="https://segsalerty.com/" className={classes.text}>
+    <div className={classN}>
+      <a href="https://segsalertywebsite.netlify.app/" className={classes.text}>
         <img src={BrandLogo} alt=" " />
-        <span>Segsalerty</span>
       </a>
     </div>
   );

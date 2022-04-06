@@ -78,6 +78,22 @@ main{
   transition: 0.3s;
 
 }
+.schedule{
+  background-color: #5E8BE0;
+  padding: 1em  ;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 50%;
+transform: translateX(-50%);
+}
+.schedule:hover{
+  background-color: #5e8be0a4;
+}
 
 .close{
   background-color: #699CFD;
@@ -149,6 +165,27 @@ transition: 0.3s;
   font-size: 1.5em;
   font-weight: 500;
 
+}
+
+.back-home{
+  text-align: center;
+  margin-top: 2em;
+ 
+}
+.back-home a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline; 
+  color: #699CFD;
+}
+.back-home a:hover, .back a:active{
+  color: #699dfd80;
+
+}
+.back-home a svg{
+  margin-top: 0.3rem ;
+  margin-right: 0.6rem ;
 }
 
 @media (max-width: 992px) {
